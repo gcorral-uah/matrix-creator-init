@@ -5,19 +5,24 @@ fpga-program.bash usr/share/matrixlabs/matrixio-devices
 em358-program.bash usr/share/matrixlabs/matrixio-devices
 matrix-init.bash usr/share/matrixlabs/matrixio-devices
 radio-init.bash usr/share/matrixlabs/matrixio-devices
-obj-arm-linux-gnueabihf/cpp/firmware_info usr/share/matrixlabs/matrixio-devices
-obj-arm-linux-gnueabihf/cpp/fpga_info usr/share/matrixlabs/matrixio-devices
+firmware_info usr/share/matrixlabs/matrixio-devices
+fpga_info usr/share/matrixlabs/matrixio-devices
 mcu_firmware.version usr/share/matrixlabs/matrixio-devices
-boot_modifications.txt usr/share/matrixlabs/matrixio-devices/config
 matrixlabs_edit_settings.py usr/share/matrixlabs/matrixio-devices
 matrixlabs_remove_console.py usr/share/matrixlabs/matrixio-devices
 voice.version usr/share/matrixlabs/matrixio-devices
+
+boot_modifications.txt usr/share/matrixlabs/matrixio-devices/config
+
 matrixio-devices-firmware.service lib/systemd/system
+
 matrix-creator-reset-jtag usr/bin
-matrix-mics.conf etc/modules-load.d
-raspicam.conf etc/modules-load.d
 voice_esptool usr/bin
 voice_esp32_enable usr/bin
 voice_esp32_reset usr/bin
+
+matrix-mics.conf etc/modules-load.d
+raspicam.conf etc/modules-load.d
+
 matrix_voice.config etc/matrixio-devices
 matrix_devices.conf etc/modprobe.d

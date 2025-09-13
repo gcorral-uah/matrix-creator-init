@@ -50,7 +50,7 @@ function check_flash_status() {
 
 function try_program() {
   sleep 0.5
-  RES=$(openocd -f  cfg/em358.cfg 2>&1 | tee -a ${LOG_FILE} | grep wrote | wc -l)
+  RES=$(openocd -f cfg/em358.cfg 2>&1 | tee -a ${LOG_FILE} | grep wrote | wc -l)
   echo $RES
 }
 

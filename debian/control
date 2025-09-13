@@ -3,13 +3,13 @@ Section: embedded
 Priority: optional
 Maintainer: MATRIX Labs <info@matrix.one>
 Build-Depends: debhelper (>= 9)
+Version: 0.1
 Standards-Version: 3.9.5
 Homepage: https://github.com/matrix-io/matrix-creator-init
-
 Package: matrixio-creator-init
 Conflicts: matrix-creator-init
 Replaces: matrix-creator-init
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends},libmatrixio-creator-hal, matrixio-openocd, wiringpi, matrixio-xc3sprog, python-pip
+Architecture: armhf
+#Depends: ${shlibs:Depends}, ${misc:Depends},libmatrixio-creator-hal, matrixio-openocd, wiringpi, matrixio-xc3sprog, python-pip
 Description: Install scripts that can program the MATRIX Creator FPGA and SAM3 IMU.
  Install scripts that can program the MATRIX Creator FPGA and SAM3 IMU.

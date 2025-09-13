@@ -58,7 +58,7 @@ function try_program() {
   reset_mcu
   sleep 0.1
 
-  RES=$(openocd -f cfg/sam3s_rpi_sysfs.cfg 2>&1 | tee ${LOG_FILE} | grep wrote | wc -l)
+  RES=$(openocd -f ./cfg/sam3s_rpi_sysfs.cfg 2>&1 | tee ${LOG_FILE} | grep wrote | wc -l)
   echo $RES
   
   sleep 0.5
@@ -73,7 +73,7 @@ function enable_program() {
 }
 
 function check_firmware() {
- COMPARE_VERSION=$(diff <(./firmware_info | grep MCU) <(cat mcu_firmware.version)|wc -l)
+ COMPARE_VERSION=$(diff <(./firmware_info | grep MCU) <(cat ./mcu_firmware.version)|wc -l)
 
  if [ "$COMPARE_VERSION" == "0" ];then
   echo 1
